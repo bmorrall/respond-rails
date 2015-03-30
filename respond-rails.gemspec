@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = "respond-rails"
-  s.version = "1.0.1"
+  s.version = "1.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Gabriel Evans", "Scott Jehl"]
-  s.date = "2011-11-23"
-  s.email = ["gabriel@codeconcoction.com", "scott@scottjehl.com"]
+  s.authors = ["Gabriel Evans", "Scott Jehl", "Ben Morrall"]
+  s.date = "2015-03-31"
+  s.email = ["gabriel@codeconcoction.com", "scott@scottjehl.com", "bemo56@hotmail.com"]
   s.extra_rdoc_files = [
     "README.md"
   ]
@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
     "vendor/assets/javascripts/respond.js",
     "vendor/assets/javascripts/respond.proxy.js"
   ]
-  s.homepage = "https://github.com/scottjehl/Respond"
+  s.homepage = "https://github.com/gevans/respond-rails"
   s.licenses = ["MIT", "GPL-2"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.10"
