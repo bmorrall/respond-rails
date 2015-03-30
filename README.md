@@ -21,10 +21,24 @@ And add `respond.js` to the list of precompiled assets:
 ```ruby
 # config/environments/production.rb
 
-config.assets.precompile += %w( modernizr.js respond.js respond-proxy.html respond.proxy.js )
+config.assets.precompile += %w( respond.js respond-proxy.html respond.proxy.js respond.proxy.gif )
 ```
 
 ## CDN/X-Domain Setup
+
+### Rails 4.2.1+
+
+If you store your assets on a separate host, all you'll need to do is ensure you have set an `asset_host` value in your configuration.
+
+```ruby
+# config/environments/production.rb
+
+config.action_controller.asset_host = "//assets.example.com"
+```
+
+Everything else has been taken care of.
+
+# Rails 4.2.0 and earlier
 
 If you store your assets on a separate host, you'll need to edit `asset_host` like so:
 
@@ -38,12 +52,7 @@ config.action_controller.asset_host = Proc.new { |source, request|
     "//assets.example.com"
   end
 }
-```
-
-This will skip the asset_host for `respond.proxy.js` and `respond.proxy.gif` which need to be on the same domain. After that, you'll need to make an addition to the precompiled assets:
-
-```ruby
-config.assets.precompile += %w( respond.js respond-proxy.html respond.proxy.js )
+config.action_controller.asset_host = "//assets.example.com"
 ```
 
 ## Copyright
